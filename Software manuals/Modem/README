@@ -1,0 +1,64 @@
+
+How to get SIM800 to work with Raspberry PI
+
+1. Make internet connection for installation
+Connect Raspberry to Internet by Wifi or Ethernet
+
+2. Enable serial port
+In Raspberry Pi configuration -> interfaces
+- Enable Serial Port
+- Disable Serial Console
+
+3. Turn off pincode
+This step only has to be done if the SIM card still has an active pincode
+Turning of the pincode is needed while the AT+CPIN command reply’s with OK to soon. This will cause the chat script to go on before the modem is ready.
+
+Install minicom
+Terminal commands:
+sudo apt-get update
+sudo apt-get install minicom
+
+Connect to modem
+Terminal command:
+sudo minicom -D /dev/ttyS0 -b 115200
+
+Turn off pincode in minicom
+minicom command:
+ATZ should return OK
+AT+CPIN? should return +CPIN: SIM PIN indicating SIM PIN is needed
+AT+CPIN="xxxx" replace xxxx by your PINCODE. should return OK. you have access to the SIM
+AT+CLCK="SC",0,"xxxx" replace xxxx by your PINCODE. to disable the pin code
+
+4. Install ppp, for serial data connections
+Terminal commands:
+Sudo apt-get update
+Sudo apt-get install ppp
+
+5. Place configuration and chatscript
+Create or paste the chatscript in folder /etc/ppp (GPRS.chat, can be found in this directory)
+Create or paste the ppp configuration file in /etc/ppp/peers (GPRSconfig, can be found in this directory, you might need to alter the APN username and password in this file.)
+
+6. Start the connection
+Terminal command:
+Sudo pon GPRSconfig
+(Connection can be turned off again with “Sudo off GPRSconfig”)
+
+7. Check the connection
+Terminal command:
+Ifconfig
+This will now show a new connection: ppp0
+The proces of setting up the connection and potential errors can be tracked with te terminal command:
+cat /var/log/syslog | grep pppd
+
+8. Make the ppp0 connection the default route
+Terminal command:
+Sudo route add default dev ppp0
+
+9. Check the connection
+Load a webpage in the browser or ping an webadres with terminal command:
+Ping google.com
+
+If you have a browser, speedtest can be run at:
+TestMy.net
+Upload will be between 30 and 45kbps
+Download will be between 80 and 100kbps

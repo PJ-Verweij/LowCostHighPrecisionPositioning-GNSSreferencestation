@@ -1,0 +1,3 @@
+(sym_lib_table
+  (lib (name Symbols_GNSS_project)(type Legacy)(uri "${KIPRJMOD}/library/Symbols GNSS project/Symbols GNSS project.lib")(options "")(descr ""))
+)

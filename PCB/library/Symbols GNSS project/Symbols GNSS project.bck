@@ -1,0 +1,62 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP BAT54C
+D Schottky diode
+K diode Schottky
+F ~
+$ENDCMP
+#
+$CMP BQ24650RVAT
+D Battery Charge Controller MPPT VQFN16 Texas Instruments BQ24650RVAT, Battery Charge Controller Lead-Acid, Lithium, Lithium-Ion, Lithium-Polymer, 16-Pin VQFN
+F http://www.ti.com/lit/ds/slusa75a/slusa75a.pdf
+$ENDCMP
+#
+$CMP CN3722
+D 5A, Multi-Chemistry Battery Charger IC With Photovoltaic Cell MPPT Function
+F http://www.consonance-elec.com/pdf/datasheet/DSE-CN3722.pdf
+$ENDCMP
+#
+$CMP LTC3426
+D Linear Technology LTC3426ES6#TRMPBF, Step Up DC-DC Converter, Adjustable, 2.25  5 V 6-Pin, TSOT-23
+F https://componentsearchengine.com/Datasheets/2/LTC3426ES6#TRMPBF.pdf
+$ENDCMP
+#
+$CMP LTC3440EMS#PBF
+D LTC3440EMS#PBF, DC-DC Converter, 0.6A Adjustable, Step-Down/Up, 2 MHz, 10-Pin MSOP
+F https://eu.mouser.com/datasheet/2/609/3440fd-1270959.pdf
+$ENDCMP
+#
+$CMP MSD1514-252MED
+D Coupled inductor with ferrite core
+K inductor choke coil reactor magnetic coupled
+F ~
+$ENDCMP
+#
+$CMP SBR10U40CT
+D Schottky diode
+K diode Schottky
+F ~
+$ENDCMP
+#
+$CMP SIM800L
+D Quad-band GSM/GPRS solution in a LGA type package
+F http://img.filipeflop.com/files/download/Datasheet_SIM800L.pdf
+$ENDCMP
+#
+$CMP SMF05C
+D SEMTECH - SMF05C - DIODE, TVS, 5 CH, BIDIR, 5V, SC70
+F https://componentsearchengine.com/Datasheets/2/SMF05C.pdf
+$ENDCMP
+#
+$CMP SQP50P03-07_GE3
+D MOSFET P-Channel 30V AEC-Q101 Qualified
+F http://www.vishay.com/docs/67071/sqp50p0307.pdf
+$ENDCMP
+#
+$CMP SRF0703-2R2M
+D Coupled inductor with ferrite core
+K inductor choke coil reactor magnetic coupled
+F ~
+$ENDCMP
+#
+#End Doc Library

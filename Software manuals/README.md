@@ -1,4 +1,4 @@
-In this folder you can find software manuals to get the separate hardware components to work on a fresh install of raspberry PI OS
+In the subfolders of this directory you can find software manuals to get the separate hardware components to work on a fresh install of raspberry PI OS
 
 However, there is also aa pre-configured image for the GNSSreferencestation (still to be uploaded)
 This image can be written to the SD card using the DD command or the graphical <a href="https://github.com/thefanclub/dd-utility">DD utility</a>. (available for Mac OS and Linux)
